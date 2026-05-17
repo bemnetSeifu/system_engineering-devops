@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script lists non-hidden current directory items showing only names after the first dash
+for file in *
+do
+    if [ -e "$file" ]
+    then
+        echo "${file#*-}"
+    fi
