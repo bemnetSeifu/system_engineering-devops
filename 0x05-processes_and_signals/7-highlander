@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script runs an infinite loop and intercepts the SIGTERM signal
+# This script runs an infinite loop and intercepts the SIGTERM signal cleanly
 
 trap 'echo "I am invincible!!!"' SIGTERM
 
