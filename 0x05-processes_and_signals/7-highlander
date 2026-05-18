@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
-# This script runs an infinite loop and intercepts the SIGTERM signal
+# This script runs an infinite loop and intercepts the SIGTERM signal instantly
 
 trap 'echo "I am invincible!!!"' SIGTERM
 
 while true
 do
     echo "To infinity and beyond"
-    sleep 2
+    sleep 2 &
+    wait $!
 done
